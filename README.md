@@ -18,11 +18,27 @@ The Music folder must contain an MP3 file called 'Blank.mp3' which is played by 
 
 The modules are:
 
-http-server.bat	- this is a DOS batch file that launches an HTTP Server which is required to service requests from the Chromecast device. It first changes directory to the folder containing the 'Music' folder then runs Python with a command to run the http.server module.
-			
-music-player.exe - this is the Music Player. It connects to the Chromecast device, then loops, waiting for it to be idle, before sending it the location and name of the next MP3 file to be played. 
+http-server.bat
 
-music-chooser.exe - this is the Music Chooser. It processes keyed or spoken commands to queue MP3 files for a specified artist or album. It responds to commands with a text response and a voice response if enabled. Initally it accepts commands from the keyboard. Voice command is a bit flakey and doesn't really work when something is already playing.
+This is a DOS batch file that launches an HTTP Server which is required to service requests from the Chromecast device. It first changes directory to the folder containing the 'Music' folder then runs Python with a command to run the http.server module. It assumes the 'Music' folder is in "C:/Users/geoff/OneDrive" and that python.exe is in "C:\Users\geoff\AppData\Local\Programs\Thonny". Change these if necessary. 
+			
+
+music-player.py
+
+This is the Music Player. It first initialises the connection to the Chromecast device, sends an instruction to play the blank MP3, then loops,
+checking the status of the Chromecast device every second to see if it is playing something and if not, calls play_next_track. It assumes the 'Music'
+folder is "C:/Users/geoff/OneDrive/Music". Change this if necessary. It also assumes the Chromecast device is called 'Miss Google'. Change this if 
+necessary.
+
+play_next_track checks if there are any files in the queue and if so, extracts the MP3 file name and location from the first file, calls play_track with
+this information, then deletes the file from the queue.
+
+play_track sends an instruction to play the MP3 file, to the Chromecast device.
+
+
+music-chooser.py
+
+This is the Music Chooser. It processes keyed or spoken commands to queue MP3 files for a specified artist or album. It responds to commands with a text response and a voice response if enabled. Initally it accepts commands from the keyboard. Voice command is a bit flakey and doesn't really work when something is already playing.
 			
 It recognises the following commands (not case-sensitive). 			
 			
@@ -48,28 +64,7 @@ The queue of music to be played is in a folder named 'Queue' below the current o
 files named with the date and time the file was created, e.g. 2021-05-25 15.09.29.570212.txt. Each file contains the location (within the 'Music' folder) 
 and name of the MP3 file to be played, e.g. Bill Evans\Waltz for Debby\01 My Foolish Heart.mp3
 
-Module details
-
-http-server.bat
-
-The HTTP Server launcher. It assumes the 'Music' folder is in "C:/Users/geoff/OneDrive" and that python.exe is in 
-"C:\Users\geoff\AppData\Local\Programs\Thonny". Change these if necessary. 
-
-music-player.py
-
-The Music Player module. This module initialises the connection to the Chromecast device, sends an instruction to play the blank MP3, then loops,
-checking the status of the Chromecast device every second to see if it is playing something and if not, calls play_next_track. It assumes the 'Music'
-folder is "C:/Users/geoff/OneDrive/Music". Change this if necessary. It also assumes the Chromecast device is called 'Miss Google'. Change this if 
-necessary.
-
-play_next_track checks if there are any files in the queue and if so, extracts the MP3 file name and location from the first file, calls play_track with
-this information, then deletes the file from the queue.
-
-play_track sends an instruction to play the MP3 file, to the Chromecast device.
-
-music-chooser.py
-
-The Music Chooser module. This module calls get_tracks to get the details of all tracks in the 'Music' folder. It then loops, calling get_command to get 
+This module first calls get_tracks to get the details of all tracks in the 'Music' folder. It then loops, calling get_command to get 
 input from the user. If the user issues command 'stop' or 'quit', it exits the loop. Otherwise it calls respond_to_command.
 
 get_tracks gets a list of all MP3 files below the 'Music' folder and populates a 'tracks' list with the artist, album, folder and filename of each track.
