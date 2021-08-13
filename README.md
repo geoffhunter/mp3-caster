@@ -31,13 +31,21 @@ music-chooser.exe	This is the Music Chooser. It processes keyed or spoken comman
 It recognises the following commands (not case-sensitive). 			
 			
 play		e.g. 'play bill evans' will queue all tracks where the artist is 'Bill Evans'. 'play waltz for debby' will queue all tracks where the album is 'Waltz for Debby'
+
 talk to me	start voice responses
+
 be quiet	stop voice responses
+
 shut up		stop voice responses
+
 use mike	start accepting voice commands
+
 mike off	stop accepting voice commands
+
 reset		clear the queue
+
 stop		exit Music Chooser
+
 quit		exit Music Chooser
 
 The queue of music to be played is in a folder named 'Queue' below the current one (where the Music Player runs). The queue consists of 1 or more text 
