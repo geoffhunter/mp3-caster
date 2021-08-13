@@ -11,7 +11,7 @@ MP3 files are organised in a 'Music' folder containing a separate folder for eac
 
 e.g. C:\Music\Bill Evans\Waltz for Debby\01 My Foolish Heart.mp3
 				
-In the above example, the directory containing the 'Music' folder is C:\. The artist is 'Bill Evans', and the album is 'Waltz for Debby'. Track names 
+In the above example, the directory containing the 'Music' folder is C:\\. The artist is 'Bill Evans', and the album is 'Waltz for Debby'. Track names 
 may start with the track number to specify the play order.
 
 The Music folder must contain an MP3 file called 'Blank.mp3' which is played by the Music Player when it needs to stop the Chromecast device playing.
