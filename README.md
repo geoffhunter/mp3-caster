@@ -18,15 +18,11 @@ The Music folder must contain an MP3 file called 'Blank.mp3' which is played by 
 
 The modules are:
 
-http-server.bat		This is a DOS batch file that launches an HTTP Server which is required to service requests from the Chromecast device. It first 
-			changes directory to the folder containing the 'Music' folder then runs Python with a command to run the http.server module.
+http-server.bat	- This is a DOS batch file that launches an HTTP Server which is required to service requests from the Chromecast device. It first changes directory to the folder containing the 'Music' folder then runs Python with a command to run the http.server module.
 			
-music-player.exe	This is the Music Player. It connects to the Chromecast device, then loops, waiting for it to be idle, before sending it the 
-			location and name of the next MP3 file to be played. 
+music-player.exe - This is the Music Player. It connects to the Chromecast device, then loops, waiting for it to be idle, before sending it the location and name of the next MP3 file to be played. 
 
-music-chooser.exe	This is the Music Chooser. It processes keyed or spoken commands to queue MP3 files for a specified artist or album. It responds 
-			to commands with a text response and a voice response if enabled. Initally it accepts commands from the keyboard. Voice command 
-			is a bit flakey and doesn't really work when something is already playing.
+music-chooser.exe - This is the Music Chooser. It processes keyed or spoken commands to queue MP3 files for a specified artist or album. It responds to commands with a text response and a voice response if enabled. Initally it accepts commands from the keyboard. Voice command is a bit flakey and doesn't really work when something is already playing.
 			
 It recognises the following commands (not case-sensitive). 			
 			
