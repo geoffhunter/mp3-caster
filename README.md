@@ -18,11 +18,11 @@ The Music folder must contain an MP3 file called 'Blank.mp3' which is played by 
 
 The modules are:
 
-http-server.bat	- This is a DOS batch file that launches an HTTP Server which is required to service requests from the Chromecast device. It first changes directory to the folder containing the 'Music' folder then runs Python with a command to run the http.server module.
+http-server.bat	- this is a DOS batch file that launches an HTTP Server which is required to service requests from the Chromecast device. It first changes directory to the folder containing the 'Music' folder then runs Python with a command to run the http.server module.
 			
-music-player.exe - This is the Music Player. It connects to the Chromecast device, then loops, waiting for it to be idle, before sending it the location and name of the next MP3 file to be played. 
+music-player.exe - this is the Music Player. It connects to the Chromecast device, then loops, waiting for it to be idle, before sending it the location and name of the next MP3 file to be played. 
 
-music-chooser.exe - This is the Music Chooser. It processes keyed or spoken commands to queue MP3 files for a specified artist or album. It responds to commands with a text response and a voice response if enabled. Initally it accepts commands from the keyboard. Voice command is a bit flakey and doesn't really work when something is already playing.
+music-chooser.exe - this is the Music Chooser. It processes keyed or spoken commands to queue MP3 files for a specified artist or album. It responds to commands with a text response and a voice response if enabled. Initally it accepts commands from the keyboard. Voice command is a bit flakey and doesn't really work when something is already playing.
 			
 It recognises the following commands (not case-sensitive). 			
 			
@@ -52,10 +52,10 @@ Module details
 
 http-server.bat
 
-The HTTP Server starter. It assumes the 'Music' folder is in "C:/Users/geoff/OneDrive" and that python.exe is in 
+The HTTP Server launcher. It assumes the 'Music' folder is in "C:/Users/geoff/OneDrive" and that python.exe is in 
 "C:\Users\geoff\AppData\Local\Programs\Thonny". Change these if necessary. 
 
-musicplayer.py
+music-player.py
 
 The Music Player module. This module initialises the connection to the Chromecast device, sends an instruction to play the blank MP3, then loops,
 checking the status of the Chromecast device every second to see if it is playing something and if not, calls play_next_track. It assumes the 'Music'
@@ -67,7 +67,7 @@ this information, then deletes the file from the queue.
 
 play_track sends an instruction to play the MP3 file, to the Chromecast device.
 
-musicchooser.py
+music-chooser.py
 
 The Music Chooser module. This module calls get_tracks to get the details of all tracks in the 'Music' folder. It then loops, calling get_command to get 
 input from the user. If the user issues command 'stop' or 'quit', it exits the loop. Otherwise it calls respond_to_command.
