@@ -32,21 +32,21 @@ It recognises the following commands (not case-sensitive).
 			
 play		e.g. 'play bill evans' will queue all tracks where the artist is 'Bill Evans'. 'play waltz for debby' will queue all tracks where the album is 'Waltz for Debby'
 
-talk to me	start voice responses
+talk to me - start voice responses
 
-be quiet	stop voice responses
+be quiet - stop voice responses
 
-shut up		stop voice responses
+shut up	- stop voice responses
 
-use mike	start accepting voice commands
+use mike - start accepting voice commands
 
-mike off	stop accepting voice commands
+mike off - stop accepting voice commands
 
-reset		clear the queue
+reset - clear the queue
 
-stop		exit Music Chooser
+stop - exit Music Chooser
 
-quit		exit Music Chooser
+quit - exit Music Chooser
 
 The queue of music to be played is in a folder named 'Queue' below the current one (where the Music Player runs). The queue consists of 1 or more text 
 files named with the date and time the file was created, e.g. 2021-05-25 15.09.29.570212.txt. Each file contains the location (within the 'Music' folder) 
