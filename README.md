@@ -28,26 +28,17 @@ music-chooser.exe	This is the Music Chooser. It processes keyed or spoken comman
 			to commands with a text response and a voice response if enabled. Initally it accepts commands from the keyboard. Voice command 
 			is a bit flakey and doesn't really work when something is already playing.
 			
-			It recognises the following commands (not case-sensitive). 			
+It recognises the following commands (not case-sensitive). 			
 			
-			play		e.g. 'play bill evans' will queue all tracks where the artist is 'Bill Evans', or 'play waltz for debby'
-					will queue all tracks where the album is 'Waltz for Debby'
-			
-			talk to me	start voice responses
-			
-			be quiet	stop voice responses
-
-			shut up		stop voice responses
-			
-			use mike	start accepting voice commands
-			
-			mike off	stop accepting voice commands
-			
-			reset		clear the queue
-			
-			stop		exit Music Chooser
-
-			quit		exit Music Chooser
+play		e.g. 'play bill evans' will queue all tracks where the artist is 'Bill Evans'. 'play waltz for debby' will queue all tracks where the album is 'Waltz for Debby'
+talk to me	start voice responses
+be quiet	stop voice responses
+shut up		stop voice responses
+use mike	start accepting voice commands
+mike off	stop accepting voice commands
+reset		clear the queue
+stop		exit Music Chooser
+quit		exit Music Chooser
 
 The queue of music to be played is in a folder named 'Queue' below the current one (where the Music Player runs). The queue consists of 1 or more text 
 files named with the date and time the file was created, e.g. 2021-05-25 15.09.29.570212.txt. Each file contains the location (within the 'Music' folder) 
