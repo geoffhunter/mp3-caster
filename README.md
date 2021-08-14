@@ -83,3 +83,10 @@ clear_tracks_from_queue deletes all files in the 'Queue' folder.
 search_tracks scans the 'tracks' list for the specified album/artist and where there is a match it calls add_track_to_queue
 
 add_track_to_queue creates a file named with the current date/time in the 'Queue' folder and writes the MP3 file location and name to it.
+
+stop.py
+
+This is a cut-down version of Music Player, which stops whatever is playing on the Chromecast device. It first initialises the connection to the Chromecast device, then sends 
+an instruction to play the blank MP3. It assumes the 'Music' folder is "C:/Users/geoff/OneDrive/Music". Change this if necessary. It also assumes the Chromecast device is 
+called 'Miss Google'. Change this if necessary. If music-player is running, it will play the next track. You could create a shortcut called 'Next' to run this executable and thereby stop playing the current track and play the next one. Or create a batch file to delete all files from the 'Queue' folder then run this executable to stop the Chromecast device playing
+
