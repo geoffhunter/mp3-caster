@@ -88,5 +88,9 @@ stop.py
 
 This is a cut-down version of Music Player, which stops whatever is playing on the Chromecast device. It first initialises the connection to the Chromecast device, then sends 
 an instruction to play the blank MP3. It assumes the 'Music' folder is "C:/Users/geoff/OneDrive/Music". Change this if necessary. It also assumes the Chromecast device is 
-called 'Miss Google'. Change this if necessary. If music-player is running, it will play the next track. You could create a shortcut called 'Next' to run this executable and thereby stop playing the current track and play the next one. Or create a batch file to delete all files from the 'Queue' folder then run this executable to stop the Chromecast device playing
+called 'Miss Google'. Change this if necessary. If music-player is running, it will play the next track. You could create a shortcut called 'Next' to run this executable and thereby stop playing the current track and play the next one. Or create a batch file to delete all files from the 'Queue' folder then run this executable to stop the Chromecast device playing and stop music-player playing the next one
+
+volume.py
+
+This utility changes the volume on the Chromecast device. It accepts a parameter 'up', 'down' and '0'. You could create shortcuts called 'Up', 'Down' and 'Mute' to call this executable with the appropriate parameters.
 
